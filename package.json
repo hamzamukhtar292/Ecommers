@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "npx babel ./src -d dist --watch",
+    "build": "babel ./src -d dist",
+    "start": "nodemon dist/index.js "
   },
   "author": "",
   "license": "ISC",
@@ -16,7 +18,20 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.2",
     "graphql": "^16.2.0",
+    "lodash": "^4.17.21",
     "mongoose": "^6.1.2",
     "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0"
   }
 }
